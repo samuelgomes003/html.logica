@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>js 02 - integraçao html</title>
+  </head>
+  <body>
+    <header><h2>Progama ola voce</h2></header>
+    <hr />
+    <input id="nome" type="text" placeholder="qual o seu nome?" />
+    <input id="exibirNome" type="button" value=" exibir nome" />
+    <p id="escreverNome"></p>
+    <script>
+      function funcaoExibirNome() {
+        let nome = document.getElementById("nome").value;
+        document.getElementById("escreverNome").textContent =
+          "ola " + nome + "!";
+      }
+      var mostrar = document.getElementById("exibirNome");
+      mostrar.addEventListener("click", funcaoExibirNome);
+    </script>
+  </body>
+</html>
